@@ -11,7 +11,7 @@ We use `lintr` and `styler` and `precommit` in this project. <br>
 It's highly recommended to set it up locally.
 
 To set it up use:
-- `install.packages("lintr")`
+- `devtools::install_github("jimhester/lintr")` (installs dev version)
 - `install.packages("styler")`
 - `install.packages("usethis")`
 - `install.packages("precommit")`
