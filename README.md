@@ -26,3 +26,14 @@ And then to enable precommit hooks run:
 You may also need to install `git2r` package. 
 
 Restart RStudio and you're ready to go.
+
+# Test coverage
+We use `covr` to check test coverage.
+You can set it up locally if you want with:
+- `install.packages("covr")`
+- `install.packages("htmltools")`
+- `install.packages("DT")`
+
+Then to run covr use:
+- `devtools::build()`
+- `covr::report()`
