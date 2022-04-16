@@ -26,5 +26,7 @@ jobs:
           extra-packages: covr
       
       - name: Test coverage
-        run: covr::package_coverage()
+        run: | 
+          cov <- covr::package_coverage()
+          if(covr::percent_coverage(cov) != 100){q(status = 1)}
         shell: Rscript {0}
