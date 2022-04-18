@@ -26,5 +26,14 @@ jobs:
           extra-packages: covr
       
       - name: Test coverage
-        run: covr::package_coverage()
+        id: test-coverage
+        run: | 
+          cov <- covr::package_coverage(quiet = FALSE)
+          if(covr::percent_coverage(cov) != 100){q(status = 1)}
         shell: Rscript {0}
+      
+      - name: Debug Job failures
+        run: |
+          echo "********** Job Logs **********"
+        if: steps.test-coverage.outcome == 'failure' && steps.test-coverage.outputs
+        
