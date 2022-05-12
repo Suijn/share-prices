@@ -1,5 +1,7 @@
 Package: shareprices
 Version: 0.1
+<<<<<<< HEAD
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+=======
