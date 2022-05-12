@@ -1,11 +1,2 @@
 Package: shareprices
 Version: 0.1
-
-Imports:shiny
-Imports:shinydashboard
-Imports:DT
-Imports:tidyverse
-Imports:tidyquant
-Imports:quantmod
-Imports:crypto2
-Imports:plotly
