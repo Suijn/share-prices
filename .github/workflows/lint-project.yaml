@@ -28,7 +28,11 @@ jobs:
       - name: Install devtools
         run: install.packages("devtools")
         shell: Rscript {0}    
-    
+
+      - name: Install shiny
+        run: install.packages("shiny")
+        shell: Rscript {0}
+
       - name: Install lintr
         run: devtools::install_github("jimhester/lintr")
         shell: Rscript {0}
@@ -36,3 +40,5 @@ jobs:
       - name: Lint root directory
         run: lintr::lint_dir()
         shell: Rscript {0}
+        
+        
