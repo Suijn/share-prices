@@ -31,31 +31,31 @@ jobs:
         run: install.packages("shiny")
         shell: Rscript {0}
 
-      - name: Install shiny
+      - name: Install shinydashboard
         run: install.packages("shinydashboard")
         shell: Rscript {0}
         
-      - name: Install shiny
+      - name: Install DT
         run: install.packages("DT")
         shell: Rscript {0}
 
-      - name: Install shiny
+      - name: Install tidyverse
         run: install.packages("tidyverse")
         shell: Rscript {0}
 
-      - name: Install shiny
+      - name: Install tidyquant
         run: install.packages("tidyquant")
         shell: Rscript {0}
 
-      - name: Install shiny
+      - name: Install quantmod
         run: install.packages("quantmod")
         shell: Rscript {0}
 
-      - name: Install shiny
+      - name: Install crypto2
         run: install.packages("crypto2")
         shell: Rscript {0}
 
-      - name: Install shiny
+      - name: Install plotly"
         run: install.packages("plotly")
         shell: Rscript {0}
 
