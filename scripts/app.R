@@ -82,7 +82,8 @@ ui <- dashboardPage(
   )
 )
 
-# ------------------------------------------------------
+
+# -----------------------------------------------------_
 # SERVER
 #-------------------------------------------------------
 server <- function(input, output) {
@@ -99,7 +100,8 @@ server <- function(input, output) {
 
   output$stocks_index_table <- renderDataTable(tq_index(input$stock_index))
 
-  output$stocks_exchange_table <- renderDataTable(tq_exchange(input$stock_exchange
+  output$stocks_exchange_table <- renderDataTable(tq_exchange(
+    input$stock_exchange
   ))
 
   output$cryptotable <- renderDataTable(crypto_list())
