@@ -14,5 +14,5 @@ utils::globalVariables(c(
   "aes",
   "tq_get",
   "ggplot",
-  "renderPlotly",
+  "renderPlotly"
 ))
