@@ -7,6 +7,7 @@ library(quantmod)
 library(crypto2)
 library(plotly)
 
+#Daniel
 
 # ------------------------------------------------------
 # UI
