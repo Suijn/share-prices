@@ -42,7 +42,7 @@ ui <- dashboardPage(
           tabName = "stocks_tables", href = NULL, newtab = TRUE,
           icon = shiny::icon("table"), selected = NULL
         ),
-        ## Plot
+        ## Stock Price Plot
         menuSubItem("Stocks Plots",
           tabName = "stocks_plot", href = NULL, newtab = TRUE,
           icon = shiny::icon("chart-line"), selected = NULL
@@ -93,7 +93,7 @@ ui <- dashboardPage(
       ),
       tabItem(
         "stocks_plot",
-        box(plotlyOutput("price_plot"), width = 8),
+        box(plotlyOutput("stock_price_plot"), width = 8),
         box(selectInput("stock_name", "Stock name:",
           selectize = FALSE,
           choices = tq_exchange("NASDAQ")[1]
@@ -161,7 +161,7 @@ ui <- dashboardPage(
 # SERVER
 #-------------------------------------------------------
 server <- function(input, output) {
-  output$price_plot <- renderPlotly({
+  output$stock_price_plot <- renderPlotly({
     ggplot(tq_get(input$stock_name), aes(x = date, y = close)) +
       geom_line(color = "darkblue") +
       ggtitle("Stock prices series") +
@@ -281,11 +281,9 @@ server <- function(input, output) {
       theme_minimal()
   })
   
-
   output$stocks_index_table <- renderDataTable(tq_index(input$stock_index))
 
-  output$stocks_exchange_table <- renderDataTable(tq_exchange(input$stock_exchange
-  ))
+  output$stocks_exchange_table <- renderDataTable(tq_exchange(input$stock_exchange))
 
   output$cryptotable <- renderDataTable(crypto_list())
 }
