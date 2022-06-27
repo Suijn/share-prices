@@ -21,10 +21,22 @@ jobs:
         with:
           use-public-rspm: true
       
-      - name: Install libcurl4
-        run:  sudo apt-get install -y libcurl4-openssl-dev
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev
+          sudo apt-get install libcurl4-openssl-dev
+          sudo apt-get install libssl-dev
+          sudo apt-get install libxml2 libxml2-dev
+    
+      - name: Install R dependencies
+        run: | 
+          install.packages("devtools")
+          install.packages('renv')
+          renv::activate()
+          renv::restore()
+        shell: Rscript {0} 
         
-      - uses: ./
       
       - uses: r-lib/actions/setup-r-dependencies@v1
         with:
