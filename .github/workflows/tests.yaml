@@ -22,6 +22,8 @@ jobs:
           install.packages("devtools")
         shell: Rscript {0}
       
+      - uses: ./
+            
       - name: Run unit tests
         run: devtools::test(reporter = c('progress', 'fail'))
         shell: Rscript {0}
