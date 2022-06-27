@@ -34,7 +34,6 @@ top_10_crypto$time_open<-as.Date(top_10_crypto$time_open)
 top_10_crypto_names <- unique(top_10_crypto$name)
   
 
-
 # ------------------------------------------------------
 # UI
 #-------------------------------------------------------
