@@ -45,7 +45,7 @@ ui <- shinydashboard::dashboardPage(
     shinydashboard::sidebarMenu(
       # Stocks
       shinydashboard::menuItem("Stocks",
-        tabName = "stocks", icon = icon("chart-line"),
+        tabName = "stocks", icon = shiny::icon("chart-line"),
         ## Table with prices
         shinydashboard::menuSubItem("Stocks Tables",
                         tabName = "stocks_tables", href = NULL, newtab = TRUE,
@@ -64,7 +64,7 @@ ui <- shinydashboard::dashboardPage(
       ),
       # Crypto
       shinydashboard::menuItem("Crypto",
-                     tabName = "crypto", icon = icon("bitcoin"),
+                     tabName = "crypto", icon =  shiny::icon("bitcoin"),
 
         ## Table with prices
         shinydashboard::menuSubItem("Crypto Table",
