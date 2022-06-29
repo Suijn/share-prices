@@ -4,7 +4,7 @@ This is an app to create a simple user interactive share prices visualization us
 # Renv
 Set up environment with:
 - `install.packages("renv")`
-- `renv::init()`
+- `renv::restore()`
 
 # Linters & precommit hooks
 We use `lintr` and `styler` and `precommit` in this project. <br>
@@ -37,3 +37,10 @@ You can set it up locally if you want with:
 Then to run covr use:
 - `devtools::build()`
 - `covr::report()`
+
+# How to run
+This app can be run locally in a docker container.
+- `docker-compose up --build`
+
+After running the above^ command the app is accessible on:
+- `http://127.0.0.1/R`

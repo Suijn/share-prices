@@ -1,4 +1,7 @@
 services:
   app: 
-    build: .
-    
+    build:
+      context: .
+      target: project
+    ports:
+      - "80:80"
