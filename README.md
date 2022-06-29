@@ -43,4 +43,4 @@ This app can be run locally in a docker container.
 - `docker-compose up --build`
 
 After running the above^ command the app is accessible on:
-- `http://127.0.0.1/shareprices`
+- `http://127.0.0.1/R`
