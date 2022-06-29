@@ -25,6 +25,6 @@ FROM copy_necessary_files as install_project_dependencies
 RUN R -e "install.packages(c('shiny', 'shinydashboard', 'DT', 'tidyverse', 'dplyr', 'tidyquant', 'quantmod', 'crypto2', 'plotly', 'gridExtra'))"
 
 FROM install_project_dependencies as project
-COPY shareprices /srv/shiny-server/shareprices
+COPY R /srv/shiny-server/R
 EXPOSE 80
 CMD ["/usr/bin/shiny-server.sh"]
